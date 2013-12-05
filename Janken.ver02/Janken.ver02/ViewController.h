@@ -27,4 +27,6 @@
 - (IBAction)btn_tyoki_dwn:(id)sender;
 - (IBAction)btn_pa_dwn:(id)sender;
 - (IBAction)btn_again_dwn:(id)sender;
+
+//hogehgoea
 @end
