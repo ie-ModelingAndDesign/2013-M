@@ -13,6 +13,13 @@
 @end
 
 @implementation COMViewController
+@synthesize label_ememy;
+@synthesize label_msg;
+@synthesize label_result;
+@synthesize button_again;
+@synthesize button_paper;
+@synthesize button_rock;
+@synthesize button_scissors;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,17 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)button_rock:(id)sender {
-}
-
-- (IBAction)button_scissors:(id)sender {
-}
-
-- (IBAction)button_paper:(id)sender {
-}
-
-- (IBAction)buttonpaper:(id)sender {
-}
 - (IBAction)push_rock:(id)sender {
 }
 

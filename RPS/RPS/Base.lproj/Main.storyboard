@@ -79,8 +79,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button_scissors:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="Ko9-IC-VpW"/>
-                                    <action selector="push_scissors:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="bUM-Zj-pRY"/>
+                                    <action selector="push_scissors:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="a51-nK-7gO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-Yp-v0o">
@@ -90,9 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button_paper:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="WUA-4W-ohX"/>
-                                    <action selector="buttonpaper:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="Sog-aJ-6Gv"/>
-                                    <action selector="push_paper:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="x6m-in-hOg"/>
+                                    <action selector="push_paper:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="cfR-mH-bZC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-uf-ZbK">
@@ -102,8 +99,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button_rock:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="996-QD-Nn5"/>
-                                    <action selector="push_rock:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="pGH-eh-J03"/>
+                                    <action selector="push_rock:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="4rX-n7-Mdu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye0-z7-j23">
@@ -113,7 +109,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="push_again:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="15u-Gp-qxI"/>
+                                    <action selector="push_again:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="mI8-I4-61p"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相手" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC7-4J-igS">
@@ -135,13 +131,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="sZP-Qf-ToR"/>
                     <connections>
-                        <outlet property="button_again" destination="Ye0-z7-j23" id="2Ly-ox-x7L"/>
-                        <outlet property="button_paper" destination="EVo-Yp-v0o" id="iMq-Ov-7yx"/>
-                        <outlet property="button_rock" destination="aKe-uf-ZbK" id="mSR-hP-lU8"/>
-                        <outlet property="button_scissors" destination="XAH-Wz-VxQ" id="vMN-kC-KiK"/>
-                        <outlet property="label_ememy" destination="RC7-4J-igS" id="lGZ-26-mZy"/>
-                        <outlet property="label_msg" destination="l1z-QI-oPd" id="oKI-FH-Mo8"/>
-                        <outlet property="label_result" destination="bZV-8u-2rc" id="WpA-Qm-NvU"/>
+                        <outlet property="button_again" destination="Ye0-z7-j23" id="9W3-sh-cmh"/>
+                        <outlet property="button_paper" destination="EVo-Yp-v0o" id="kh4-UN-ELT"/>
+                        <outlet property="button_rock" destination="aKe-uf-ZbK" id="2C7-YV-nKF"/>
+                        <outlet property="button_scissors" destination="XAH-Wz-VxQ" id="UKk-vR-4G2"/>
+                        <outlet property="label_ememy" destination="RC7-4J-igS" id="ccB-xj-Jis"/>
+                        <outlet property="label_msg" destination="l1z-QI-oPd" id="5WF-Lv-M7p"/>
+                        <outlet property="label_result" destination="WXW-SJ-fxD" id="4Tr-oD-vQm"/>
                         <outlet property="push_again" destination="Ye0-z7-j23" id="bRU-vw-JfA"/>
                     </connections>
                 </viewController>
