@@ -10,9 +10,12 @@
 
 @interface VSViewController ()
 
+
 @end
 
 @implementation VSViewController
+@dynamic Key;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,4 +38,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)Key
+{
+    // キーボードを隠す
+    [self.view endEditing:YES];
+    
+    return YES;
+}
+
+
+
 @end
+

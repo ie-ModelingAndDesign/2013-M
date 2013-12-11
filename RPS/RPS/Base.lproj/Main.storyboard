@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -72,7 +72,7 @@
         <!--View Controller-->
         <scene sceneID="QyV-1I-oby">
             <objects>
-                <viewController id="YMd-hh-1NF" sceneMemberID="viewController">
+                <viewController id="YMd-hh-1NF" customClass="VSViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGf-Xr-SZq"/>
                         <viewControllerLayoutGuide type="bottom" id="mKO-r1-mDM"/>
@@ -95,12 +95,15 @@
                                 <rect key="frame" x="20" y="174" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YJH-Pf-sg5"/>
+                    <connections>
+                        <outlet property="Key" destination="rUm-5L-C96" id="Dwe-ES-EmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPR-jO-nv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +112,6 @@
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="U6P-YK-2gY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-Sg-8mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="l3Q-4g-2yT" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9qL-WE-vHX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -128,6 +130,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Lgh-K9-JLY"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-Sg-8mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="509"/>
         </scene>
