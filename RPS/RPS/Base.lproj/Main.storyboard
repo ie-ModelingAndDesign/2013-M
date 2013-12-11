@@ -16,27 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vO-pr-EJo">
-                                <rect key="frame" x="139" y="134" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="じゃかじゃかジャンケン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vO-pr-EJo">
+                                <rect key="frame" x="20" y="125" width="280" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beb-jC-ter">
-                                <rect key="frame" x="135" y="315" width="55" height="30"/>
+                                <rect key="frame" x="127" y="316" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button1">
+                                <state key="normal" title="COM対戦">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vlb-o1-DhV" kind="modal" id="bNW-7q-KB1"/>
+                                    <action selector="com:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iV7-4O-9om"/>
+                                    <action selector="combtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OIN-uv-u34"/>
+                                    <segue destination="Vlb-o1-DhV" kind="push" id="cKK-W5-1iu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dc-3v-P0x">
-                                <rect key="frame" x="135" y="393" width="55" height="30"/>
+                                <rect key="frame" x="108" y="385" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button2">
+                                <state key="normal" title="オンライン対戦">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -131,6 +133,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sZP-Qf-ToR"/>
                     <connections>
                         <outlet property="button_again" destination="Ye0-z7-j23" id="2Ly-ox-x7L"/>
                         <outlet property="button_paper" destination="EVo-Yp-v0o" id="iMq-Ov-7yx"/>
@@ -186,7 +189,6 @@
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="U6P-YK-2gY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-Sg-8mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="l3Q-4g-2yT" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9qL-WE-vHX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -205,6 +207,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Lgh-K9-JLY"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0w-Sg-8mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="509"/>
         </scene>

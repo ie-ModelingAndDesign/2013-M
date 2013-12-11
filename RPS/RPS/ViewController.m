@@ -7,18 +7,24 @@
 //
 
 #import "ViewController.h"
-
+#import "COMViewController.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+/*　画面遷移がしたい途中
+- (IBAction)combtn:(id)sender {
+    COMViewController *com = [[COMViewController alloc] initWithNibName:@"COMViewController" bundle:nil];
+}
+ */
 
 - (void)didReceiveMemoryWarning
 {
