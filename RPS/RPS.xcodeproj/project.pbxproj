@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4462C61858823400DC0EB6 /* commViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4462C51858823400DC0EB6 /* commViewController.m */; };
 		6A57B70318501CA4001FE236 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A57B70218501CA4001FE236 /* Foundation.framework */; };
 		6A57B70518501CA4001FE236 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A57B70418501CA4001FE236 /* CoreGraphics.framework */; };
 		6A57B70718501CA4001FE236 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A57B70618501CA4001FE236 /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		6A57B72418501CA5001FE236 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A57B70618501CA4001FE236 /* UIKit.framework */; };
 		6A57B72C18501CA5001FE236 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A57B72A18501CA5001FE236 /* InfoPlist.strings */; };
 		6A57B72E18501CA5001FE236 /* RPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A57B72D18501CA5001FE236 /* RPSTests.m */; };
-		6A57B7391850215E001FE236 /* COMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A57B7381850215E001FE236 /* COMViewController.m */; };
 		6A57B73C1852D839001FE236 /* VSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A57B73B1852D839001FE236 /* VSViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A4462C41858823400DC0EB6 /* commViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commViewController.h; sourceTree = "<group>"; };
+		6A4462C51858823400DC0EB6 /* commViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commViewController.m; sourceTree = "<group>"; };
 		6A57B6FF18501CA4001FE236 /* RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A57B70218501CA4001FE236 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6A57B70418501CA4001FE236 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +57,6 @@
 		6A57B72918501CA5001FE236 /* RPSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPSTests-Info.plist"; sourceTree = "<group>"; };
 		6A57B72B18501CA5001FE236 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A57B72D18501CA5001FE236 /* RPSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSTests.m; sourceTree = "<group>"; };
-		6A57B7371850215E001FE236 /* COMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMViewController.h; sourceTree = "<group>"; };
-		6A57B7381850215E001FE236 /* COMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMViewController.m; sourceTree = "<group>"; };
 		6A57B73A1852D839001FE236 /* VSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSViewController.h; sourceTree = "<group>"; };
 		6A57B73B1852D839001FE236 /* VSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,8 +123,8 @@
 				6A57B71418501CA4001FE236 /* Main.storyboard */,
 				6A57B73A1852D839001FE236 /* VSViewController.h */,
 				6A57B73B1852D839001FE236 /* VSViewController.m */,
-				6A57B7371850215E001FE236 /* COMViewController.h */,
-				6A57B7381850215E001FE236 /* COMViewController.m */,
+				6A4462C41858823400DC0EB6 /* commViewController.h */,
+				6A4462C51858823400DC0EB6 /* commViewController.m */,
 				6A57B71718501CA4001FE236 /* ViewController.h */,
 				6A57B71818501CA4001FE236 /* ViewController.m */,
 				6A57B71A18501CA4001FE236 /* Images.xcassets */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A57B7391850215E001FE236 /* COMViewController.m in Sources */,
+				6A4462C61858823400DC0EB6 /* commViewController.m in Sources */,
 				6A57B73C1852D839001FE236 /* VSViewController.m in Sources */,
 				6A57B71918501CA4001FE236 /* ViewController.m in Sources */,
 				6A57B71318501CA4001FE236 /* AppDelegate.m in Sources */,

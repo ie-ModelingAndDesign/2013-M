@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "COMViewController.h"
+//#import "COMViewController.h"
 @interface ViewController ()
 
 @end
