@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -23,18 +23,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beb-jC-ter">
-                                <rect key="frame" x="127" y="316" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="COM対戦">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="com:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iV7-4O-9om"/>
-                                    <action selector="combtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OIN-uv-u34"/>
-                                    <segue destination="Vlb-o1-DhV" kind="push" id="cKK-W5-1iu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dc-3v-P0x">
                                 <rect key="frame" x="108" y="385" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,6 +33,16 @@
                                     <segue destination="54m-fO-cPM" kind="modal" id="j64-WT-6pK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jr-na-CH5">
+                                <rect key="frame" x="125" y="311" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="COM対戦">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vlb-o1-DhV" kind="modal" id="b10-LH-elh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -53,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="-71" y="-239"/>
         </scene>
-        <!--View Controller-->
+        <!--Comm View Controller-->
         <scene sceneID="jOl-YN-ehe">
             <objects>
-                <viewController id="Vlb-o1-DhV" customClass="COMViewController" sceneMemberID="viewController">
+                <viewController id="Vlb-o1-DhV" customClass="CommViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wwn-3e-MeZ"/>
                         <viewControllerLayoutGuide type="bottom" id="M81-cy-L6G"/>
@@ -78,9 +76,6 @@
                                 <state key="normal" title="チョキ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="push_scissors:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="a51-nK-7gO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVo-Yp-v0o">
                                 <rect key="frame" x="236" y="337" width="30" height="30"/>
@@ -88,9 +83,6 @@
                                 <state key="normal" title="パー">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="push_paper:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="cfR-mH-bZC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-uf-ZbK">
                                 <rect key="frame" x="56" y="337" width="30" height="30"/>
@@ -98,9 +90,6 @@
                                 <state key="normal" title="グー">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="push_rock:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="4rX-n7-Mdu"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye0-z7-j23">
                                 <rect key="frame" x="138" y="407" width="45" height="30"/>
@@ -108,9 +97,6 @@
                                 <state key="normal" title="再挑戦">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="push_again:" destination="Vlb-o1-DhV" eventType="touchUpInside" id="mI8-I4-61p"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相手" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC7-4J-igS">
                                 <rect key="frame" x="143" y="144" width="34" height="21"/>
@@ -130,16 +116,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sZP-Qf-ToR"/>
-                    <connections>
-                        <outlet property="button_again" destination="Ye0-z7-j23" id="9W3-sh-cmh"/>
-                        <outlet property="button_paper" destination="EVo-Yp-v0o" id="kh4-UN-ELT"/>
-                        <outlet property="button_rock" destination="aKe-uf-ZbK" id="2C7-YV-nKF"/>
-                        <outlet property="button_scissors" destination="XAH-Wz-VxQ" id="UKk-vR-4G2"/>
-                        <outlet property="label_ememy" destination="RC7-4J-igS" id="ccB-xj-Jis"/>
-                        <outlet property="label_msg" destination="l1z-QI-oPd" id="5WF-Lv-M7p"/>
-                        <outlet property="label_result" destination="WXW-SJ-fxD" id="4Tr-oD-vQm"/>
-                        <outlet property="push_again" destination="Ye0-z7-j23" id="bRU-vw-JfA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBl-9Q-Gnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,15 +147,12 @@
                                 <rect key="frame" x="20" y="203" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YJH-Pf-sg5"/>
-                    <connections>
-                        <outlet property="Key" destination="rUm-5L-C96" id="Dwe-ES-EmS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPR-jO-nv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,18 +1,18 @@
 //
-//  VSViewController.m
+//  commViewController.m
 //  RPS
 //
-//  Created by e125719 on 2013/12/07.
+//  Created by e125719 on 2013/12/11.
 //  Copyright (c) 2013年 e125719. All rights reserved.
 //
 
-#import "VSViewController.h"
+#import "commViewController.h"
 
-@interface VSViewController ()
+@interface commViewController ()
 
 @end
 
-@implementation VSViewController
+@implementation commViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,12 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end

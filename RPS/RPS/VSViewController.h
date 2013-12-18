@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface VSViewController : UIViewController<UITextFieldDelegate>
-
-
-@property (weak, nonatomic) IBOutlet UITextField *Key;
-
+@interface VSViewController : UIViewController
 
 @end
