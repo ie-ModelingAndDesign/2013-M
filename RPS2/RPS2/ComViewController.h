@@ -1,16 +1,16 @@
 //
-//  COMViewController.h
-//  RPS
+//  ComViewController.h
+//  RPS2
 //
-//  Created by e125719 on 2013/12/05.
+//  Created by e125719 on 2013/12/18.
 //  Copyright (c) 2013年 e125719. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface COMViewController : UIViewController
+@interface ComViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *label_msg;
-@property (weak, nonatomic) IBOutlet UILabel *label_ememy;
+@property (weak, nonatomic) IBOutlet UILabel *label_enemy;
 @property (weak, nonatomic) IBOutlet UILabel *label_result;
 
 @property (weak, nonatomic) IBOutlet UIButton *button_rock;
@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *button_paper;
 @property (weak, nonatomic) IBOutlet UIButton *button_again;
 
-- (IBAction)push_rock:(id)sender;
-- (IBAction)push_scissors:(id)sender;
-- (IBAction)push_paper:(id)sender;
-- (IBAction)push_again:(id)sender;
+- (IBAction)rock_push:(id)sender;
+- (IBAction)scissors_push:(id)sender;
+- (IBAction)paper_push:(id)sender;
+- (IBAction)again_push:(id)sender;
 @end
