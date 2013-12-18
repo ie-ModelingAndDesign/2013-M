@@ -7,8 +7,18 @@
 //
 
 #import "PeerListViewController.h"
+#import "SessionHelper.h"
 
-@interface PeerListViewController ()
+@import MultipeerConnectivity;
+
+static NSString * const CellIdentifier = @"Cell";
+
+@interface PeerListViewController () <MCBrowserViewControllerDelegate, SessionHelperDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic) SessionHelper *sessionHelper;
+@property (nonatomic) MCPeerID *selectedPeerID;
+
+- (IBAction)browseButtonDidTouch:(id)sender;
 
 @end
 
@@ -26,12 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,77 +50,121 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.sessionHelper.connectedPeersCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
+    
+    MCPeerID *peerID = [self.sessionHelper connectedPeerIDAtIndex:indexPath.row];
+    cell.textLabel.text = peerID.displayName;
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UITableViewControllerDelegate methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
+    self.selectedPeerID = [self.sessionHelper connectedPeerIDAtIndex:indexPath.row];
+    
+    if (self.selectedPeerID) {
+        UIImagePickerController *imagePickerController = [UIImagePickerController new];
+        imagePickerController.delegate = self;
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - MCBrowserViewControllerDelegate methods
+
+- (BOOL)browserViewController:(MCBrowserViewController *)browserViewController
+      shouldPresentNearbyPeer:(MCPeerID *)peerID
+            withDiscoveryInfo:(NSDictionary *)info
+{
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
- */
+- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
+{
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - SessionHelperDelegate methods
+
+- (void)sessionHelperDidChangeConnectedPeers:(SessionHelper *)sessionHelper
+{
+    [self.tableView reloadData];
+}
+
+- (void)sessionHelperDidRecieveImage:(UIImage *)image peer:(MCPeerID *)peerID
+{
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), NULL);
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    [self.sessionHelper sendImage:image peerID:self.selectedPeerID];
+    self.selectedPeerID = nil;
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Handler methods
+
+- (IBAction)browseButtonDidTouch:(id)sender
+{
+    MCBrowserViewController *viewController = [[MCBrowserViewController alloc] initWithServiceType:self.sessionHelper.serviceType
+                                                                                           session:self.sessionHelper.session];
+    viewController.delegate = self;
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (void)savingImageIsFinished:(UIImage *)image
+     didFinishSavingWithError:(NSError *)error
+                  contextInfo:(void *)contextInfo
+{
+    if (error) {
+        NSLog(@"%@", error);
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"受信した画像をカメラロールに保存しました。"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+#pragma mark - Public methods
+
+- (void)createSessionWithDisplayName:(NSString *)displayName
+{
+    self.sessionHelper = [[SessionHelper alloc] initWithDisplayName:displayName];
+    self.sessionHelper.delegate = self;
+}
 
 @end

@@ -23,6 +23,8 @@
 		6AC17449185954A2003F8D09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC17447185954A2003F8D09 /* InfoPlist.strings */; };
 		6AC1744B185954A2003F8D09 /* RPS2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1744A185954A2003F8D09 /* RPS2Tests.m */; };
 		6AC1745618595812003F8D09 /* VSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1745518595812003F8D09 /* VSViewController.m */; };
+		E061E0CD186181B900ED13CA /* PeerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E061E0CC186181B900ED13CA /* PeerListViewController.m */; };
+		E061E0D01861828700ED13CA /* SessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E061E0CF1861828700ED13CA /* SessionHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		6AC1744A185954A2003F8D09 /* RPS2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPS2Tests.m; sourceTree = "<group>"; };
 		6AC1745418595812003F8D09 /* VSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSViewController.h; sourceTree = "<group>"; };
 		6AC1745518595812003F8D09 /* VSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSViewController.m; sourceTree = "<group>"; };
+		E061E0CB186181B900ED13CA /* PeerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerListViewController.h; sourceTree = "<group>"; };
+		E061E0CC186181B900ED13CA /* PeerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerListViewController.m; sourceTree = "<group>"; };
+		E061E0CE1861828700ED13CA /* SessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionHelper.h; sourceTree = "<group>"; };
+		E061E0CF1861828700ED13CA /* SessionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,10 @@
 				6AC1745518595812003F8D09 /* VSViewController.m */,
 				6A1528A418615EA50050353F /* ComViewController.h */,
 				6A1528A518615EA50050353F /* ComViewController.m */,
+				E061E0CB186181B900ED13CA /* PeerListViewController.h */,
+				E061E0CC186181B900ED13CA /* PeerListViewController.m */,
+				E061E0CE1861828700ED13CA /* SessionHelper.h */,
+				E061E0CF1861828700ED13CA /* SessionHelper.m */,
 				6AC17434185954A2003F8D09 /* ViewController.h */,
 				6AC17435185954A2003F8D09 /* ViewController.m */,
 				6AC17437185954A2003F8D09 /* Images.xcassets */,
@@ -259,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E061E0D01861828700ED13CA /* SessionHelper.m in Sources */,
+				E061E0CD186181B900ED13CA /* PeerListViewController.m in Sources */,
 				6AC17436185954A2003F8D09 /* ViewController.m in Sources */,
 				6AC1745618595812003F8D09 /* VSViewController.m in Sources */,
 				6AC17430185954A2003F8D09 /* AppDelegate.m in Sources */,

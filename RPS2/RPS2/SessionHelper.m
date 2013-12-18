@@ -8,113 +8,136 @@
 
 #import "SessionHelper.h"
 
-@interface SessionHelper ()
+static NSString * const ServiceType = @"cm-p2ptest";
+
+@interface SessionHelper () <MCSessionDelegate>
+
+@property (nonatomic) MCAdvertiserAssistant *advertiserAssistant;
+@property (nonatomic) NSMutableArray *connectedPeerIDs;
 
 @end
 
 @implementation SessionHelper
 
-- (id)initWithStyle:(UITableViewStyle)style
+#pragma mark - Accessor methods
+
+- (NSString *)serviceType
 {
-    self = [super initWithStyle:style];
+    return ServiceType;
+}
+
+- (NSUInteger)connectedPeersCount
+{
+    return self.connectedPeerIDs.count;
+}
+
+#pragma mark - Lifecycle methods
+
+- (instancetype)initWithDisplayName:(NSString *)displayName
+{
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.connectedPeerIDs = [NSMutableArray new];
+        
+        MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
+        _session = [[MCSession alloc] initWithPeer:peerID];
+        _session.delegate = self;
+        
+        self.advertiserAssistant = [[MCAdvertiserAssistant alloc] initWithServiceType:self.serviceType
+                                                                        discoveryInfo:nil
+                                                                              session:self.session];
+        [self.advertiserAssistant start];
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)dealloc
 {
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.advertiserAssistant stop];
+    [self.session disconnect];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - MCSessionDelegate methods
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    BOOL needToNotify = NO;
     
-    // Configure the cell...
+    if (state == MCSessionStateConnected) {
+        if (![self.connectedPeerIDs containsObject:peerID]) {
+            [self.connectedPeerIDs addObject:peerID];
+            needToNotify = YES;
+        }
+    } else {
+        if ([self.connectedPeerIDs containsObject:peerID]) {
+            [self.connectedPeerIDs removeObject:peerID];
+            needToNotify = YES;
+        }
+    }
     
-    return cell;
+    if (needToNotify) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate sessionHelperDidChangeConnectedPeers:self];
+        });
+    }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    UIImage *image = [UIImage imageWithData:data];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.delegate sessionHelperDidRecieveImage:image peer:peerID];
+    });
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)session:(MCSession *)session
+didStartReceivingResourceWithName:(NSString *)resourceName
+       fromPeer:(MCPeerID *)peerID
+   withProgress:(NSProgress *)progress
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    // Do nothing
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+- (void)session:(MCSession *)session
+didFinishReceivingResourceWithName:(NSString *)resourceName
+       fromPeer:(MCPeerID *)peerID
+          atURL:(NSURL *)localURL
+      withError:(NSError *)error
 {
+    // Do nothing
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)session:(MCSession *)session
+didReceiveStream:(NSInputStream *)stream
+       withName:(NSString *)streamName
+       fromPeer:(MCPeerID *)peerID
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    // Do nothing
 }
-*/
 
-/*
-#pragma mark - Navigation
+#pragma mark - Public methods
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (MCPeerID *)connectedPeerIDAtIndex:(NSUInteger)index
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (index >= self.connectedPeerIDs.count) {
+        return nil;
+    }
+    
+    return self.connectedPeerIDs[index];
 }
 
- */
+- (void)sendImage:(UIImage *)image peerID:(MCPeerID *)peerID
+{
+    NSData *data = UIImageJPEGRepresentation(image, 0.9f);
+    
+    NSError *error;
+    [self.session sendData:data
+                   toPeers:@[peerID]
+                  withMode:MCSessionSendDataReliable
+                     error:&error];
+    if (error) {
+        NSLog(@"Failed %@", error);
+    }
+}
 
 @end

@@ -10,6 +10,7 @@
 
 @interface VSViewController ()
 
+
 @end
 
 @implementation VSViewController
@@ -27,7 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.textField.delegate = self;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -35,4 +38,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)theTextField{
+        [theTextField resignFirstResponder];
+    return YES;
+}
+
 @end
+
