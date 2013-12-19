@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="87" y="-344"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Peer List View Controller - Root View Controller-->
         <scene sceneID="PvQ-lk-cHe">
             <objects>
-                <tableViewController id="q5k-er-8Lv" sceneMemberID="viewController">
+                <tableViewController id="q5k-er-8Lv" customClass="PeerListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yok-LR-XUZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tVe-2G-LEA"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="tVe-2G-LEA">
+                        <barButtonItem key="rightBarButtonItem" title="検索" id="emq-Uf-drH">
+                            <connections>
+                                <action selector="browseButtonDidTouch:" destination="q5k-er-8Lv" id="CHZ-9A-pwl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfF-me-mO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
