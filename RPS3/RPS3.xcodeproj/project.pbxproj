@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A8828AC187D0EE80007E56C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */; };
+		6A8828B1187D0F8E0007E56C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828B0187D0F8E0007E56C /* GameKit.framework */; };
+		6A8828B4187D106A0007E56C /* MultipeerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B3187D106A0007E56C /* MultipeerController.m */; };
 		E036370C18587BDB00069778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370B18587BDB00069778 /* Foundation.framework */; };
 		E036370E18587BDB00069778 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370D18587BDB00069778 /* CoreGraphics.framework */; };
 		E036371018587BDB00069778 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370F18587BDB00069778 /* UIKit.framework */; };
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		6A8828B0187D0F8E0007E56C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6A8828B2187D106A0007E56C /* MultipeerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipeerController.h; path = ../MultipeerController.h; sourceTree = "<group>"; };
+		6A8828B3187D106A0007E56C /* MultipeerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipeerController.m; path = ../MultipeerController.m; sourceTree = "<group>"; };
 		E036370818587BDB00069778 /* RPS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E036370B18587BDB00069778 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E036370D18587BDB00069778 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8828B1187D0F8E0007E56C /* GameKit.framework in Frameworks */,
+				6A8828AC187D0EE80007E56C /* MultipeerConnectivity.framework in Frameworks */,
 				E036370E18587BDB00069778 /* CoreGraphics.framework in Frameworks */,
 				E036371018587BDB00069778 /* UIKit.framework in Frameworks */,
 				E036370C18587BDB00069778 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,8 @@
 		E036370A18587BDB00069778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A8828B0187D0F8E0007E56C /* GameKit.framework */,
+				6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */,
 				E036370B18587BDB00069778 /* Foundation.framework */,
 				E036370D18587BDB00069778 /* CoreGraphics.framework */,
 				E036370F18587BDB00069778 /* UIKit.framework */,
@@ -115,6 +126,8 @@
 				E036371A18587BDB00069778 /* AppDelegate.h */,
 				E036371B18587BDB00069778 /* AppDelegate.m */,
 				E036371D18587BDB00069778 /* Main.storyboard */,
+				6A8828B2187D106A0007E56C /* MultipeerController.h */,
+				6A8828B3187D106A0007E56C /* MultipeerController.m */,
 				E036372018587BDB00069778 /* ViewController.h */,
 				E036372118587BDB00069778 /* ViewController.m */,
 				E036372318587BDB00069778 /* Images.xcassets */,
@@ -252,6 +265,7 @@
 				E036372218587BDB00069778 /* ViewController.m in Sources */,
 				E036371C18587BDB00069778 /* AppDelegate.m in Sources */,
 				E036371818587BDB00069778 /* main.m in Sources */,
+				6A8828B4187D106A0007E56C /* MultipeerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +474,7 @@
 				E036373C18587BDB00069778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E036373D18587BDB00069778 /* Build configuration list for PBXNativeTarget "RPS3Tests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +483,7 @@
 				E036373F18587BDB00069778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

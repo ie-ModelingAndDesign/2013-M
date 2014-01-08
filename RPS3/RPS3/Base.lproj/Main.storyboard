@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Qo-0D-k84">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Qo-0D-k84">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -25,6 +25,7 @@
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="3wo-ud-jfg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAO-88-NCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="HwT-Hz-28j" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rpa-sN-LXr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -43,13 +44,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Vr8-uO-Nit"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uAO-88-NCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1321" y="552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="65H-2E-C53">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1k-DS-d66" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="w46-Ba-NAe" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M5q-FA-m8N">
                         <autoresizingMask key="autoresizingMask"/>
@@ -58,14 +59,14 @@
                         <segue destination="Cpy-Yi-fpb" kind="relationship" relationship="rootViewController" id="ite-Nj-Oiu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L1k-DS-d66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="579" y="552"/>
         </scene>
-        <!--View Controller-->
+        <!--Multipeer Controller-->
         <scene sceneID="PLT-b8-Wac">
             <objects>
-                <viewController id="Cpy-Yi-fpb" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AED-bF-SWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Cpy-Yi-fpb" customClass="MultipeerController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JLr-HI-Bog"/>
                         <viewControllerLayoutGuide type="bottom" id="the-wr-oK9"/>
@@ -75,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMb-LS-dS2">
-                                <rect key="frame" x="137" y="442" width="46" height="30"/>
+                                <rect key="frame" x="137" y="413" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,12 +85,17 @@
                                     <segue destination="HwT-Hz-28j" kind="push" id="H1m-0j-b8j"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNA-7D-cRe">
+                                <rect key="frame" x="112" y="185" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hBA-yP-1oH"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AED-bF-SWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940" y="552"/>
         </scene>

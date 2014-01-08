@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GameKit/GameKit.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface MultipeerController : UIViewController
+@interface MultipeerController : UIViewController <UITextFieldDelegate, MCAdvertiserAssistantDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate> {
+    UITextField* name;
+    UIButton* advertise;
+}
 
 @end

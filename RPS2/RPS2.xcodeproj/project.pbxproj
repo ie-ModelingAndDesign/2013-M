@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6A1528A618615EA50050353F /* ComViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1528A518615EA50050353F /* ComViewController.m */; };
+		6A8828B7187D13CB0007E56C /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B6187D13CB0007E56C /* TitleViewController.m */; };
+		6A8828BA187D14320007E56C /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B9187D14320007E56C /* ConnectViewController.m */; };
 		6AC17420185954A2003F8D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1741F185954A2003F8D09 /* Foundation.framework */; };
 		6AC17422185954A2003F8D09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC17421185954A2003F8D09 /* CoreGraphics.framework */; };
 		6AC17424185954A2003F8D09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC17423185954A2003F8D09 /* UIKit.framework */; };
@@ -15,7 +17,6 @@
 		6AC1742C185954A2003F8D09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1742B185954A2003F8D09 /* main.m */; };
 		6AC17430185954A2003F8D09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1742F185954A2003F8D09 /* AppDelegate.m */; };
 		6AC17433185954A2003F8D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC17431185954A2003F8D09 /* Main.storyboard */; };
-		6AC17436185954A2003F8D09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC17435185954A2003F8D09 /* ViewController.m */; };
 		6AC17438185954A2003F8D09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC17437185954A2003F8D09 /* Images.xcassets */; };
 		6AC1743F185954A2003F8D09 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1743E185954A2003F8D09 /* XCTest.framework */; };
 		6AC17440185954A2003F8D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1741F185954A2003F8D09 /* Foundation.framework */; };
@@ -40,6 +41,10 @@
 /* Begin PBXFileReference section */
 		6A1528A418615EA50050353F /* ComViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComViewController.h; sourceTree = "<group>"; };
 		6A1528A518615EA50050353F /* ComViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComViewController.m; sourceTree = "<group>"; };
+		6A8828B5187D13CB0007E56C /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleViewController.h; path = ../TitleViewController.h; sourceTree = "<group>"; };
+		6A8828B6187D13CB0007E56C /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleViewController.m; path = ../TitleViewController.m; sourceTree = "<group>"; };
+		6A8828B8187D14320007E56C /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
+		6A8828B9187D14320007E56C /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
 		6AC1741C185954A2003F8D09 /* RPS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC1741F185954A2003F8D09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6AC17421185954A2003F8D09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +56,6 @@
 		6AC1742E185954A2003F8D09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AC1742F185954A2003F8D09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6AC17432185954A2003F8D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6AC17434185954A2003F8D09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6AC17435185954A2003F8D09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6AC17437185954A2003F8D09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6AC1743D185954A2003F8D09 /* RPS2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPS2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC1743E185954A2003F8D09 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,6 +130,10 @@
 				6AC1742E185954A2003F8D09 /* AppDelegate.h */,
 				6AC1742F185954A2003F8D09 /* AppDelegate.m */,
 				6AC17431185954A2003F8D09 /* Main.storyboard */,
+				6A8828B8187D14320007E56C /* ConnectViewController.h */,
+				6A8828B9187D14320007E56C /* ConnectViewController.m */,
+				6A8828B5187D13CB0007E56C /* TitleViewController.h */,
+				6A8828B6187D13CB0007E56C /* TitleViewController.m */,
 				6AC1745418595812003F8D09 /* VSViewController.h */,
 				6AC1745518595812003F8D09 /* VSViewController.m */,
 				6A1528A418615EA50050353F /* ComViewController.h */,
@@ -135,8 +142,6 @@
 				E061E0CC186181B900ED13CA /* PeerListViewController.m */,
 				E061E0CE1861828700ED13CA /* SessionHelper.h */,
 				E061E0CF1861828700ED13CA /* SessionHelper.m */,
-				6AC17434185954A2003F8D09 /* ViewController.h */,
-				6AC17435185954A2003F8D09 /* ViewController.m */,
 				6AC17437185954A2003F8D09 /* Images.xcassets */,
 				6AC17426185954A2003F8D09 /* Supporting Files */,
 			);
@@ -269,9 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8828B7187D13CB0007E56C /* TitleViewController.m in Sources */,
 				E061E0D01861828700ED13CA /* SessionHelper.m in Sources */,
 				E061E0CD186181B900ED13CA /* PeerListViewController.m in Sources */,
-				6AC17436185954A2003F8D09 /* ViewController.m in Sources */,
+				6A8828BA187D14320007E56C /* ConnectViewController.m in Sources */,
 				6AC1745618595812003F8D09 /* VSViewController.m in Sources */,
 				6AC17430185954A2003F8D09 /* AppDelegate.m in Sources */,
 				6AC1742C185954A2003F8D09 /* main.m in Sources */,
