@@ -64,20 +64,16 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iRg-O7-5pr" id="6fi-Rh-jGf"/>
+                            <outlet property="delegate" destination="iRg-O7-5pr" id="jTs-Qw-23i"/>
+                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Xru-ZU-ixK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="pp7-fz-K2g">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g31-bN-HZg">
-                                <rect key="frame" x="233" y="5" width="71" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="browseButtonDidTouch:" destination="iRg-O7-5pr" eventType="touchUpInside" id="nOe-bf-ySW"/>
-                                </connections>
-                            </button>
+                    <navigationItem key="navigationItem" id="Xru-ZU-ixK">
+                        <barButtonItem key="rightBarButtonItem" title="Browse" id="wMG-zN-gSA">
+                            <connections>
+                                <action selector="browseButtonDidTouch:" destination="iRg-O7-5pr" id="aQS-p0-PZH"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

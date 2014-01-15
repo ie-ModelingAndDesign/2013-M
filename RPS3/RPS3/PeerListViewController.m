@@ -18,7 +18,7 @@ static NSString * const CellIdentifier = @"Cell";
 @property (nonatomic) SessionHelper *sessionHelper;
 @property (nonatomic) MCPeerID *selectedPeerID;
 
-- (IBAction)brouseButtonDidTouch:(id)sender;
+- (IBAction)browseButtonDidTouch:(id)sender;
 
 @end
 
@@ -56,15 +56,11 @@ static NSString * const CellIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return self.sessionHelper.connectedPeersCount;
 }
 
@@ -105,9 +101,11 @@ static NSString * const CellIdentifier = @"Cell";
 
 - (IBAction)browseButtonDidTouch:(id)sender
 {
-    MCBrowserViewController *playerInfoViewController = [[MCBrowserViewController alloc] initWithServiceType:self.sessionHelper.serviceType session:self.sessionHelper.session];
+    MCBrowserViewController *viewController = [[MCBrowserViewController alloc] initWithServiceType:self.sessionHelper.serviceType session:self.sessionHelper.session];
     
-    playerInfoViewController.delegate = self;
+    viewController.delegate = self;
+    
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (void)createSessionWithDisplayName:(NSString *)displayName
