@@ -10,6 +10,7 @@
 		6A50388D188642870010CEB1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50388C188642870010CEB1 /* StartViewController.m */; };
 		6A503890188645140010CEB1 /* PlayerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50388F188645140010CEB1 /* PlayerInfoViewController.m */; };
 		6A5038931886455C0010CEB1 /* PeerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5038921886455C0010CEB1 /* PeerListViewController.m */; };
+		6A50389618864EE80010CEB1 /* SessionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50389518864EE80010CEB1 /* SessionHelper.m */; };
 		6A8828AC187D0EE80007E56C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */; };
 		6A8828B1187D0F8E0007E56C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828B0187D0F8E0007E56C /* GameKit.framework */; };
 		E036370C18587BDB00069778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370B18587BDB00069778 /* Foundation.framework */; };
@@ -44,6 +45,8 @@
 		6A50388F188645140010CEB1 /* PlayerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInfoViewController.m; sourceTree = "<group>"; };
 		6A5038911886455C0010CEB1 /* PeerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerListViewController.h; sourceTree = "<group>"; };
 		6A5038921886455C0010CEB1 /* PeerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerListViewController.m; sourceTree = "<group>"; };
+		6A50389418864EE80010CEB1 /* SessionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionHelper.h; sourceTree = "<group>"; };
+		6A50389518864EE80010CEB1 /* SessionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionHelper.m; sourceTree = "<group>"; };
 		6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		6A8828B0187D0F8E0007E56C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E036370818587BDB00069778 /* RPS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +138,8 @@
 				6A50388F188645140010CEB1 /* PlayerInfoViewController.m */,
 				6A50388B188642870010CEB1 /* StartViewController.h */,
 				6A50388C188642870010CEB1 /* StartViewController.m */,
+				6A50389418864EE80010CEB1 /* SessionHelper.h */,
+				6A50389518864EE80010CEB1 /* SessionHelper.m */,
 				E036372318587BDB00069778 /* Images.xcassets */,
 				E036371218587BDB00069778 /* Supporting Files */,
 			);
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A50389618864EE80010CEB1 /* SessionHelper.m in Sources */,
 				6A50388D188642870010CEB1 /* StartViewController.m in Sources */,
 				6A503890188645140010CEB1 /* PlayerInfoViewController.m in Sources */,
 				E036371C18587BDB00069778 /* AppDelegate.m in Sources */,

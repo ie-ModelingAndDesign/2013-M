@@ -7,8 +7,15 @@
 //
 
 #import "PlayerInfoViewController.h"
+#import "PeerListViewController.h"
 
-@interface PlayerInfoViewController ()
+static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegue";
+
+@interface PlayerInfoViewController () <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *displayNameTextField;
+
+- (IBAction)createSessionButtonDidTouch:(id)sender;
 
 @end
 
@@ -33,6 +40,28 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:SegueIdentifierPushPeerListView]) {
+        PeerListViewController *playerInfoViewController = segue.destinationViewController;
+        [playerInfoViewController createSessionWithDisplayName:self.displayNameTextField.text];
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [_text resignFirstResponder];
+    return NO;
+}
+
+- (IBAction)createSessionButtonDidTouch:(id)sender:(id)sender
+{
+    if (self.displayNameTextField.text.length == 0) {
+        return;
+    }
+    
+    [self performSegueWithIdentifier:SegueIdentifierPushPeerListView sender:self];
 }
 
 @end

@@ -7,8 +7,16 @@
 //
 
 #import "PeerListViewController.h"
+#import "SessionHelper.h"
 
-@interface PeerListViewController ()
+@import MultipeerConnectivity;
+
+@interface PeerListViewController () <MCBrowserViewControllerDelegate, SessionHelperDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic) SessionHelper *sessionHelper;
+@property (nonatomic) MCPeerID *selectedPeerID;
+
+- (IBAction)brouseButtonDidTouch:(id)sender;
 
 @end
 
@@ -32,6 +40,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,22 +56,22 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.sessionHelper.connectedPeersCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    MCPeerID *peerID = [self.sessionHelper connectedPeerIDAtIndex:indexPath.row];
+    cell.textLabel.text = peerID.displayName;
     
     return cell;
 }
@@ -116,5 +126,43 @@
 }
 
  */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedPeerID = [self.sessionHelper connectedPeerIDAtIndex:indexPath.row];
+}
+
+- (BOOL)browserViewController:(MCBrowserViewController *)browserViewController shouldPresentNearbyPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info
+{
+    return YES;
+}
+
+- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
+{
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
+{
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)sessionHelperDidChangeConnectedPeers:(SessionHelper *)sessionHelper
+{
+    [self.tableView reloadData];
+}
+
+- (IBAction)browseButtonDidTouch:(id)sender
+{
+    MCBrowserViewController *playerInfoViewController = [[MCBrowserViewController alloc] initWithServiceType:self.sessionHelper.serviceType session:self.sessionHelper.session];
+    
+    playerInfoViewController.delegate = self;
+}
+
+- (void)createSessionWithDisplayName:(NSString *)displayName
+{
+    self.sessionHelper = [[SessionHelper alloc] initWithDisplayName:displayName];
+    self.sessionHelper.delegate = self;
+}
 
 @end

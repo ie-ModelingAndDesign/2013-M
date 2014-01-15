@@ -10,4 +10,6 @@
 
 @interface PeerListViewController : UITableViewController
 
+- (void)createSessionWithDisplayName:(NSString *)displayName;
+
 @end

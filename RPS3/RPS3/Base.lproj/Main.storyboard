@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="-2093" y="-2085"/>
         </scene>
-        <!--Peer List View Controller - Root View Controller-->
+        <!--Peer List View Controller-->
         <scene sceneID="Aef-qB-wQR">
             <objects>
-                <tableViewController id="iRg-O7-5pr" customClass="PeerListViewController" sceneMemberID="viewController">
+                <tableViewController id="iRg-O7-5pr" userLabel="Peer List View Controller" customClass="PeerListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lfw-kZ-0yo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,18 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Xru-ZU-ixK"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Xru-ZU-ixK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="pp7-fz-K2g">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g31-bN-HZg">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGz-Yf-39m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +101,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="createSessionButtonDidTouch:" destination="n7J-dg-SaP" eventType="touchUpInside" id="8BW-6Z-dFu"/>
                                     <segue destination="iRg-O7-5pr" kind="push" id="MGh-9P-CcH"/>
                                 </connections>
                             </button>
@@ -107,6 +119,7 @@
                     <connections>
                         <outlet property="_button" destination="9ur-Wn-ZRs" id="H9Q-zj-Mtd"/>
                         <outlet property="_text" destination="sTW-Xf-4uQ" id="hsZ-vi-lqt"/>
+                        <outlet property="displayNameTextField" destination="sTW-Xf-4uQ" id="Vo1-0O-ETH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lm-PR-N4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
