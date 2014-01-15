@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A50388D188642870010CEB1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50388C188642870010CEB1 /* StartViewController.m */; };
+		6A503890188645140010CEB1 /* PlayerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50388F188645140010CEB1 /* PlayerInfoViewController.m */; };
+		6A5038931886455C0010CEB1 /* PeerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5038921886455C0010CEB1 /* PeerListViewController.m */; };
 		6A8828AC187D0EE80007E56C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */; };
 		6A8828B1187D0F8E0007E56C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8828B0187D0F8E0007E56C /* GameKit.framework */; };
-		6A8828B4187D106A0007E56C /* MultipeerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B3187D106A0007E56C /* MultipeerController.m */; };
 		E036370C18587BDB00069778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370B18587BDB00069778 /* Foundation.framework */; };
 		E036370E18587BDB00069778 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370D18587BDB00069778 /* CoreGraphics.framework */; };
 		E036371018587BDB00069778 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370F18587BDB00069778 /* UIKit.framework */; };
@@ -17,7 +19,6 @@
 		E036371818587BDB00069778 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E036371718587BDB00069778 /* main.m */; };
 		E036371C18587BDB00069778 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E036371B18587BDB00069778 /* AppDelegate.m */; };
 		E036371F18587BDB00069778 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E036371D18587BDB00069778 /* Main.storyboard */; };
-		E036372218587BDB00069778 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E036372118587BDB00069778 /* ViewController.m */; };
 		E036372418587BDB00069778 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E036372318587BDB00069778 /* Images.xcassets */; };
 		E036372B18587BDB00069778 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036372A18587BDB00069778 /* XCTest.framework */; };
 		E036372C18587BDB00069778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370B18587BDB00069778 /* Foundation.framework */; };
@@ -37,10 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A50388B188642870010CEB1 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		6A50388C188642870010CEB1 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		6A50388E188645140010CEB1 /* PlayerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInfoViewController.h; sourceTree = "<group>"; };
+		6A50388F188645140010CEB1 /* PlayerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInfoViewController.m; sourceTree = "<group>"; };
+		6A5038911886455C0010CEB1 /* PeerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerListViewController.h; sourceTree = "<group>"; };
+		6A5038921886455C0010CEB1 /* PeerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerListViewController.m; sourceTree = "<group>"; };
 		6A8828AB187D0EE80007E56C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		6A8828B0187D0F8E0007E56C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		6A8828B2187D106A0007E56C /* MultipeerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipeerController.h; path = ../MultipeerController.h; sourceTree = "<group>"; };
-		6A8828B3187D106A0007E56C /* MultipeerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipeerController.m; path = ../MultipeerController.m; sourceTree = "<group>"; };
 		E036370818587BDB00069778 /* RPS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E036370B18587BDB00069778 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E036370D18587BDB00069778 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +57,6 @@
 		E036371A18587BDB00069778 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E036371B18587BDB00069778 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E036371E18587BDB00069778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E036372018587BDB00069778 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E036372118587BDB00069778 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E036372318587BDB00069778 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E036372918587BDB00069778 /* RPS3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPS3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E036372A18587BDB00069778 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -126,10 +129,12 @@
 				E036371A18587BDB00069778 /* AppDelegate.h */,
 				E036371B18587BDB00069778 /* AppDelegate.m */,
 				E036371D18587BDB00069778 /* Main.storyboard */,
-				6A8828B2187D106A0007E56C /* MultipeerController.h */,
-				6A8828B3187D106A0007E56C /* MultipeerController.m */,
-				E036372018587BDB00069778 /* ViewController.h */,
-				E036372118587BDB00069778 /* ViewController.m */,
+				6A5038911886455C0010CEB1 /* PeerListViewController.h */,
+				6A5038921886455C0010CEB1 /* PeerListViewController.m */,
+				6A50388E188645140010CEB1 /* PlayerInfoViewController.h */,
+				6A50388F188645140010CEB1 /* PlayerInfoViewController.m */,
+				6A50388B188642870010CEB1 /* StartViewController.h */,
+				6A50388C188642870010CEB1 /* StartViewController.m */,
 				E036372318587BDB00069778 /* Images.xcassets */,
 				E036371218587BDB00069778 /* Supporting Files */,
 			);
@@ -262,10 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E036372218587BDB00069778 /* ViewController.m in Sources */,
+				6A50388D188642870010CEB1 /* StartViewController.m in Sources */,
+				6A503890188645140010CEB1 /* PlayerInfoViewController.m in Sources */,
 				E036371C18587BDB00069778 /* AppDelegate.m in Sources */,
 				E036371818587BDB00069778 /* main.m in Sources */,
-				6A8828B4187D106A0007E56C /* MultipeerController.m in Sources */,
+				6A5038931886455C0010CEB1 /* PeerListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

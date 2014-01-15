@@ -1,0 +1,17 @@
+//
+//  PlayerInfoViewController.h
+//  RPS3
+//
+//  Created by e125719 on 2014/01/15.
+//  Copyright (c) 2014年 Yoshida Kannyuu. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface PlayerInfoViewController : UIViewController
+{
+    IBOutlet UITextField* _text;
+    IBOutlet UIButton* _button;
+}
+
+@end
