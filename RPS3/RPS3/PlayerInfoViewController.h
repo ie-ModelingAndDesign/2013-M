@@ -9,9 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayerInfoViewController : UIViewController
-{
-    IBOutlet UITextField* _text;
-    IBOutlet UIButton* _button;
-}
 
 @end

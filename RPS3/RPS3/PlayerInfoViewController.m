@@ -21,6 +21,7 @@ static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegu
 
 @implementation PlayerInfoViewController
 
+/*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +30,7 @@ static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegu
     }
     return self;
 }
+ */
 
 - (void)viewDidLoad
 {
@@ -41,6 +43,7 @@ static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegu
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:SegueIdentifierPushPeerListView]) {
@@ -51,11 +54,11 @@ static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegu
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [_text resignFirstResponder];
+    [textField resignFirstResponder];
     return NO;
 }
 
-- (IBAction)createSessionButtonDidTouch:(id)sender:(id)sender
+- (IBAction)createSessionButtonDidTouch:(id)sender
 {
     if (self.displayNameTextField.text.length == 0) {
         return;
