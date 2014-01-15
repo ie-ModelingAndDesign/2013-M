@@ -1,18 +1,18 @@
 //
-//  MultipeerController.m
-//  RPS3
+//  TitleViewController.m
+//  RPS2
 //
-//  Created by e125719 on 2014/01/08.
-//  Copyright (c) 2014年 Yoshida Kannyuu. All rights reserved.
+//  Created by e125719 on 2014/01/09.
+//  Copyright (c) 2014年 e125719. All rights reserved.
 //
 
-#import "MultipeerController.h"
+#import "TitleViewController.h"
 
-@interface MultipeerController ()
+@interface TitleViewController ()
 
 @end
 
-@implementation MultipeerController
+@implementation TitleViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
