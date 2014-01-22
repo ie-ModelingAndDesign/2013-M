@@ -77,6 +77,7 @@ static NSString * const CellIdentifier = @"Cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedPeerID = [self.sessionHelper connectedPeerIDAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"select" sender:self];
 }
 
 - (BOOL)browserViewController:(MCBrowserViewController *)browserViewController shouldPresentNearbyPeer:(MCPeerID *)peerID withDiscoveryInfo:(NSDictionary *)info
