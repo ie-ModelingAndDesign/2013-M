@@ -7,6 +7,7 @@
 //
 
 #import "SessionHelper.h"
+#import "VsViewController.h"
 
 static NSString * const ServiceType = @"cm-p2ptest";
 
@@ -74,9 +75,21 @@ static NSString * const ServiceType = @"cm-p2ptest";
     }
 }
 
+- (void)sendData:(NSString *)str
+{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    
+    [self.session sendData:data toPeers:[_session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
+}
+
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
+    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
+    if ([message isEqual:@"rock"]) {
+    
+    }
 }
 
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress

@@ -11,6 +11,7 @@
 @import MultipeerConnectivity;
 
 @class SessionHelper;
+@class VsViewController;
 
 @protocol SessionHelperDelegate <NSObject>
 
@@ -19,15 +20,18 @@
 
 @end
 
-@interface SessionHelper : NSObject
+@interface SessionHelper : NSObject <MCSessionDelegate>
 
 @property (nonatomic, readonly) MCSession *session;
 @property (nonatomic, readonly) NSString *serviceType;
 @property (nonatomic, readonly) NSUInteger connectedPeersCount;
+@property (nonatomic) VsViewController *view;
 @property (nonatomic, weak) id <SessionHelperDelegate> delegate;
 
 - (instancetype)initWithDisplayName:(NSString *)displayName;
 
 - (MCPeerID *)connectedPeerIDAtIndex:(NSUInteger)index;
+
+- (void)sendData:(NSString *)str;
 
 @end
