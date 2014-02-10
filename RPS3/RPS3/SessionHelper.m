@@ -98,19 +98,19 @@ static NSString * const ServiceType = @"cm-p2ptest";
         if ([message isEqual:@"rock"]) {
             VsViewController *VSC;
             VSC.yourock=1;
-            NSLog(@"rock");
+            NSLog(@"%d",VSC.yourock);
         }
         
         if ([message isEqual:@"scissors"]) {
             VsViewController *VSC;
             VSC.youscissors = 2;
-            NSLog(@"scissors");
+            NSLog(@"%d",VSC.youscissors);
         }
         
         if ([message isEqual:@"paper"]) {
             VsViewController *VSC;
             VSC.youpaper=3;
-            NSLog(@"paper");
+            NSLog(@"%d",VSC.youpaper);
         }
         
     });
