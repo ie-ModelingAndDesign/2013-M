@@ -28,6 +28,8 @@
 @property (nonatomic) VsViewController *view;
 @property (nonatomic, weak) id <SessionHelperDelegate> delegate;
 
+@property NSString *str;
+
 - (instancetype)initWithDisplayName:(NSString *)displayName;
 
 - (MCPeerID *)connectedPeerIDAtIndex:(NSUInteger)index;

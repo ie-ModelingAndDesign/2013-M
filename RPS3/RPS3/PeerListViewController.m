@@ -44,6 +44,7 @@ static NSString * const CellIdentifier = @"Cell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    [_sessionHelper setView:[self.storyboard instantiateViewControllerWithIdentifier:@"VsView"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,7 +88,11 @@ static NSString * const CellIdentifier = @"Cell";
 
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
 {
-    [browserViewController dismissViewControllerAnimated:YES completion:nil];
+    //[browserViewController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self presentModalViewController:_sessionHelper.view animated:YES];
+    }];
+    
 }
 
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController

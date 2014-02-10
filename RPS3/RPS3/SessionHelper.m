@@ -20,6 +20,7 @@ static NSString * const ServiceType = @"cm-p2ptest";
 @end
 
 @implementation SessionHelper
+@synthesize str;
 
 - (void)setView:(VsViewController *)view
 {
@@ -88,6 +89,7 @@ static NSString * const ServiceType = @"cm-p2ptest";
     NSError *error;
     
     [self.session sendData:data toPeers:[_session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
+    NSLog(@"%@",str);
 }
 
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID

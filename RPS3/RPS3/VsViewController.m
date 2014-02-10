@@ -15,6 +15,10 @@
 
 @implementation VsViewController
 
+@synthesize yourock;
+@synthesize youpaper;
+@synthesize youscissors;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -53,6 +57,13 @@
     self.button_scissors.hidden = YES;
     self.button_paper.hidden = YES;
     
+    if (yourock == 1) {
+        self.label_msg.text = @"fuga";
+    }
+    SessionHelper *SH;
+    SH.str = @"rock";
+    
+
 }
 
 // プレイヤーが"チョキ"ボタンを選択した場合
@@ -61,6 +72,13 @@
     
     self.button_rock.hidden = YES;
     self.button_paper.hidden = YES;
+    
+    if (youscissors == 2) {
+        self.label_msg.text = @"hoge";
+    }
+    
+    SessionHelper *SH;
+    SH.str = @"scissors";
 }
 
 // プレイヤーが"パー"ボタンを選択した場合
@@ -69,6 +87,13 @@
     
     self.button_rock.hidden = YES;
     self.button_scissors.hidden = YES;
+    
+    if (youpaper) {
+        self.label_msg.text = @"piyo";
+    }
+    SessionHelper *SH;
+    SH.str = @"papper";
+    
 }
 
 - (IBAction)again_push:(id)sender {
