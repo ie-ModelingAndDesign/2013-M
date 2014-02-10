@@ -52,48 +52,153 @@
 
 // プレイヤーが"グー"ボタンを選択した場合
 - (IBAction)rock_push:(id)sender {
+    
+    SessionHelper *SH;
+    SH.str = @"rock";
+    
     [_helper sendData:@"rock"];
     
     self.button_scissors.hidden = YES;
     self.button_paper.hidden = YES;
     
     if (yourock == 1) {
-        self.label_msg.text = @"fuga";
+        self.label_msg.text = @"あいこで・・・";
+        
+        self.button_scissors.hidden = NO;
+        self.button_paper.hidden = NO;
     }
-    SessionHelper *SH;
-    SH.str = @"rock";
     
-
+    if (youscissors == 2) {
+        self.label_msg.text = @"あなたの勝ち";
+        
+        self.button_rock.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+    }
+    
+    if (youpaper == 3) {
+        self.label_msg.text = @"あなたの負け";
+        
+        self.button_rock.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+        youscissors = 0;
+        youpaper = 0;
+    }
 }
 
 // プレイヤーが"チョキ"ボタンを選択した場合
 - (IBAction)scissors_push:(id)sender {
+    
+    SessionHelper *SH;
+    SH.str = @"scissors";
+    
     [_helper sendData:@"scissors"];
     
     self.button_rock.hidden = YES;
     self.button_paper.hidden = YES;
     
-    if (youscissors == 2) {
-        self.label_msg.text = @"hoge";
+    if (yourock == 1) {
+        self.label_msg.text = @"あなたの負け";
+        
+        self.button_scissors.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+        youscissors = 0;
+        youpaper = 0;
     }
     
-    SessionHelper *SH;
-    SH.str = @"scissors";
+    if (youscissors == 2) {
+        self.label_msg.text = @"あいこで・・・";
+        
+        self.button_rock.hidden = NO;
+        self.button_paper.hidden = NO;
+    }
+    
+    if (youpaper == 3) {
+        self.label_msg.text = @"あなたの勝ち";
+        
+        self.button_scissors.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+        youscissors = 0;
+        youpaper = 0;
+    }
 }
 
 // プレイヤーが"パー"ボタンを選択した場合
 - (IBAction)paper_push:(id)sender {
+    
+    SessionHelper *SH;
+    SH.str = @"paper";
+    
     [_helper sendData:@"paper"];
     
     self.button_rock.hidden = YES;
     self.button_scissors.hidden = YES;
     
-    if (youpaper) {
-        self.label_msg.text = @"piyo";
+    if (yourock == 1) {
+        self.label_msg.text = @"あなたの勝ち";
+        
+        self.button_paper.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+        youscissors = 0;
+        youpaper = 0;
     }
-    SessionHelper *SH;
-    SH.str = @"papper";
     
+    if (youscissors == 2) {
+        self.label_msg.text = @"あなたの負け";
+        
+        self.button_paper.hidden = YES;
+        self.button_again.hidden = NO;
+        
+        // Just in case
+        self.button_rock.enabled = NO;
+        self.button_scissors.enabled = NO;
+        self.button_paper.enabled = NO;
+        
+        yourock = 0;
+        youscissors = 0;
+        youpaper = 0;
+    }
+    
+    if (youpaper == 3) {
+        self.label_msg.text = @"あいこで・・・";
+        
+        self.button_rock.hidden = NO;
+        self.button_scissors.hidden = NO;
+    }
 }
 
 - (IBAction)again_push:(id)sender {

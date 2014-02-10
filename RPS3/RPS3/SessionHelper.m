@@ -95,23 +95,22 @@ static NSString * const ServiceType = @"cm-p2ptest";
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
     NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+    VsViewController *VSC = _view;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([message isEqual:@"rock"]) {
-            VsViewController *VSC;
-            VSC.yourock=1;
+            VSC.yourock = 1;
             NSLog(@"%d",VSC.yourock);
         }
         
         if ([message isEqual:@"scissors"]) {
-            VsViewController *VSC;
             VSC.youscissors = 2;
             NSLog(@"%d",VSC.youscissors);
         }
         
         if ([message isEqual:@"paper"]) {
-            VsViewController *VSC;
-            VSC.youpaper=3;
+            VSC.youpaper = 3;
             NSLog(@"%d",VSC.youpaper);
         }
         
