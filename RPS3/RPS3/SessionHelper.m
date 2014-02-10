@@ -16,6 +16,7 @@ static NSString * const ServiceType = @"cm-p2ptest";
 @property (nonatomic) MCAdvertiserAssistant *advertizerAssistant;
 @property (nonatomic) NSMutableArray *connectedPeerIDs;
 
+
 @end
 
 @implementation SessionHelper
@@ -95,15 +96,21 @@ static NSString * const ServiceType = @"cm-p2ptest";
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([message isEqual:@"rock"]) {
-            
+            VsViewController *VSC;
+            VSC.yourock=1;
+            NSLog(@"rock");
         }
         
         if ([message isEqual:@"scissors"]) {
-            
+            VsViewController *VSC;
+            VSC.youscissors = 2;
+            NSLog(@"scissors");
         }
         
         if ([message isEqual:@"paper"]) {
-            
+            VsViewController *VSC;
+            VSC.youpaper=3;
+            NSLog(@"paper");
         }
         
     });

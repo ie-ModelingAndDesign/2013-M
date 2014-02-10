@@ -21,6 +21,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *button_paper;
 @property (weak, nonatomic) IBOutlet UIButton *button_again;
 
+@property int yourock;
+@property int youscissors;
+@property int youpaper;
+
 @property (nonatomic) SessionHelper *helper;
 
 - (void)setSession:(SessionHelper *)helper;

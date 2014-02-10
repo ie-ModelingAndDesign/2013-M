@@ -53,9 +53,6 @@
     self.button_scissors.hidden = YES;
     self.button_paper.hidden = YES;
     
-    if ([]) {
-        <#statements#>
-    }
 }
 
 // プレイヤーが"チョキ"ボタンを選択した場合
