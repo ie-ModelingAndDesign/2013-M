@@ -20,6 +20,12 @@ static NSString * const ServiceType = @"cm-p2ptest";
 
 @implementation SessionHelper
 
+- (void)setView:(VsViewController *)view
+{
+    _view = view;
+    [_view setSession:self];
+}
+
 - (NSString *)serviceType
 {
     return ServiceType;
@@ -87,9 +93,20 @@ static NSString * const ServiceType = @"cm-p2ptest";
 {
     NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    if ([message isEqual:@"rock"]) {
-    
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([message isEqual:@"rock"]) {
+            
+        }
+        
+        if ([message isEqual:@"scissors"]) {
+            
+        }
+        
+        if ([message isEqual:@"paper"]) {
+            
+        }
+        
+    });
 }
 
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress

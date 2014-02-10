@@ -103,7 +103,7 @@ static NSString * const CellIdentifier = @"Cell";
     [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - SessionHelperDelegate methods
+ #pragma mark - SessionHelperDelegate methods
 
 - (void)sessionHelperDidChangeConnectedPeers:(SessionHelper *)sessionHelper
 {

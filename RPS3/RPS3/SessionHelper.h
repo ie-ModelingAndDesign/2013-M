@@ -32,6 +32,8 @@
 
 - (MCPeerID *)connectedPeerIDAtIndex:(NSUInteger)index;
 
+- (void)setView:(VsViewController *)view;
+
 - (void)sendData:(NSString *)str;
 
 @end

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A1528A618615EA50050353F /* ComViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1528A518615EA50050353F /* ComViewController.m */; };
-		6A8828B7187D13CB0007E56C /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B6187D13CB0007E56C /* TitleViewController.m */; };
+		6A2332AB187E44F9001F063F /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2332AA187E44F9001F063F /* TitleViewController.m */; };
 		6A8828BA187D14320007E56C /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8828B9187D14320007E56C /* ConnectViewController.m */; };
 		6AC17420185954A2003F8D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC1741F185954A2003F8D09 /* Foundation.framework */; };
 		6AC17422185954A2003F8D09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC17421185954A2003F8D09 /* CoreGraphics.framework */; };
@@ -41,8 +41,8 @@
 /* Begin PBXFileReference section */
 		6A1528A418615EA50050353F /* ComViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComViewController.h; sourceTree = "<group>"; };
 		6A1528A518615EA50050353F /* ComViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComViewController.m; sourceTree = "<group>"; };
-		6A8828B5187D13CB0007E56C /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleViewController.h; path = ../TitleViewController.h; sourceTree = "<group>"; };
-		6A8828B6187D13CB0007E56C /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleViewController.m; path = ../TitleViewController.m; sourceTree = "<group>"; };
+		6A2332A9187E44F9001F063F /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		6A2332AA187E44F9001F063F /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		6A8828B8187D14320007E56C /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
 		6A8828B9187D14320007E56C /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
 		6AC1741C185954A2003F8D09 /* RPS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,10 +130,10 @@
 				6AC1742E185954A2003F8D09 /* AppDelegate.h */,
 				6AC1742F185954A2003F8D09 /* AppDelegate.m */,
 				6AC17431185954A2003F8D09 /* Main.storyboard */,
+				6A2332A9187E44F9001F063F /* TitleViewController.h */,
+				6A2332AA187E44F9001F063F /* TitleViewController.m */,
 				6A8828B8187D14320007E56C /* ConnectViewController.h */,
 				6A8828B9187D14320007E56C /* ConnectViewController.m */,
-				6A8828B5187D13CB0007E56C /* TitleViewController.h */,
-				6A8828B6187D13CB0007E56C /* TitleViewController.m */,
 				6AC1745418595812003F8D09 /* VSViewController.h */,
 				6AC1745518595812003F8D09 /* VSViewController.m */,
 				6A1528A418615EA50050353F /* ComViewController.h */,
@@ -274,8 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A8828B7187D13CB0007E56C /* TitleViewController.m in Sources */,
 				E061E0D01861828700ED13CA /* SessionHelper.m in Sources */,
+				6A2332AB187E44F9001F063F /* TitleViewController.m in Sources */,
 				E061E0CD186181B900ED13CA /* PeerListViewController.m in Sources */,
 				6A8828BA187D14320007E56C /* ConnectViewController.m in Sources */,
 				6AC1745618595812003F8D09 /* VSViewController.m in Sources */,

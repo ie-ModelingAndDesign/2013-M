@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PeerListViewController : UITableViewController
+@interface PeerListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 - (void)createSessionWithDisplayName:(NSString *)displayName;
 
