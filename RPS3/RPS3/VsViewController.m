@@ -38,6 +38,10 @@
     
     // "もう一度"ボタンを隠す
     self.button_again.hidden = YES;
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"kime.png"]];
 }
 
 - (void)didReceiveMemoryWarning
