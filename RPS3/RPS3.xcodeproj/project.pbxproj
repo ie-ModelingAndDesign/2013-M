@@ -29,6 +29,7 @@
 		A8306B0C18A9F489002645A1 /* title2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8306B0B18A9F489002645A1 /* title2.png */; };
 		A8306B0E18A9F4BA002645A1 /* tusin.png in Resources */ = {isa = PBXBuildFile; fileRef = A8306B0D18A9F4BA002645A1 /* tusin.png */; };
 		A8306B1018A9F4C5002645A1 /* com.png in Resources */ = {isa = PBXBuildFile; fileRef = A8306B0F18A9F4C5002645A1 /* com.png */; };
+		A8306B1218AA03FD002645A1 /* seach.png in Resources */ = {isa = PBXBuildFile; fileRef = A8306B1118AA03FD002645A1 /* seach.png */; };
 		E036370C18587BDB00069778 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370B18587BDB00069778 /* Foundation.framework */; };
 		E036370E18587BDB00069778 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370D18587BDB00069778 /* CoreGraphics.framework */; };
 		E036371018587BDB00069778 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036370F18587BDB00069778 /* UIKit.framework */; };
@@ -83,6 +84,7 @@
 		A8306B0B18A9F489002645A1 /* title2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title2.png; sourceTree = "<group>"; };
 		A8306B0D18A9F4BA002645A1 /* tusin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tusin.png; sourceTree = "<group>"; };
 		A8306B0F18A9F4C5002645A1 /* com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = com.png; sourceTree = "<group>"; };
+		A8306B1118AA03FD002645A1 /* seach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seach.png; sourceTree = "<group>"; };
 		E036370818587BDB00069778 /* RPS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E036370B18587BDB00069778 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E036370D18587BDB00069778 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 				A8306AF518A9F010002645A1 /* choki.png */,
 				A8306AF618A9F010002645A1 /* gu.png */,
 				A8306AF718A9F010002645A1 /* iwa.jpg */,
+				A8306B1118AA03FD002645A1 /* seach.png */,
 				A8306AF818A9F010002645A1 /* ki.png */,
 				A8306AF918A9F010002645A1 /* lose.png */,
 				A8306AFA18A9F010002645A1 /* mokume.jpg */,
@@ -313,6 +316,7 @@
 				A8306B0218A9F010002645A1 /* ki.png in Resources */,
 				A8306B1018A9F4C5002645A1 /* com.png in Resources */,
 				A8306B0118A9F010002645A1 /* iwa.jpg in Resources */,
+				A8306B1218AA03FD002645A1 /* seach.png in Resources */,
 				A8306B0718A9F010002645A1 /* retry.gif in Resources */,
 				A8306AFF18A9F010002645A1 /* choki.png in Resources */,
 				A8306B0318A9F010002645A1 /* lose.png in Resources */,

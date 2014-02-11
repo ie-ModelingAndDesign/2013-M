@@ -208,6 +208,10 @@
 - (IBAction)again_push:(id)sender {
     self.label_msg.text = @"じゃんけん・・・";
     
+    yourock = 0;
+    youscissors = 0;
+    youpaper = 0;
+    
     // "グー", "チョキ", "パー"ボタンを表示
     self.button_rock.hidden = NO;
     self.button_scissors.hidden = NO;

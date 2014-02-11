@@ -36,6 +36,10 @@ static NSString * const SegueIdentifierPushPeerListView = @"PushPeerListViewSegu
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"kime.png"]];
+    
 }
 
 - (void)didReceiveMemoryWarning
