@@ -21,9 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button_paper;
 @property (weak, nonatomic) IBOutlet UIButton *button_again;
 
-@property int yourock;
-@property int youscissors;
-@property int youpaper;
+@property int aite;
 
 @property (nonatomic) SessionHelper *helper;
 

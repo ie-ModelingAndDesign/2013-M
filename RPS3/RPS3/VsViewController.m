@@ -15,9 +15,7 @@
 
 @implementation VsViewController
 
-@synthesize yourock;
-@synthesize youpaper;
-@synthesize youscissors;
+@synthesize aite;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,14 +63,16 @@
     self.button_scissors.hidden = YES;
     self.button_paper.hidden = YES;
     
-    if (yourock == 1) {
+    if (aite == 1) {
         self.label_msg.text = @"あいこで・・・";
         
         self.button_scissors.hidden = NO;
         self.button_paper.hidden = NO;
+        
+        aite = 0;
     }
     
-    if (youscissors == 2) {
+    if (aite == 2) {
         self.label_msg.text = @"あなたの勝ち";
         
         self.button_rock.hidden = YES;
@@ -83,10 +83,10 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
+        aite = 0;
     }
     
-    if (youpaper == 3) {
+    if (aite == 3) {
         self.label_msg.text = @"あなたの負け";
         
         self.button_rock.hidden = YES;
@@ -97,9 +97,7 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
-        youscissors = 0;
-        youpaper = 0;
+        aite = 0;
     }
 }
 
@@ -114,7 +112,7 @@
     self.button_rock.hidden = YES;
     self.button_paper.hidden = YES;
     
-    if (yourock == 1) {
+    if (aite == 1) {
         self.label_msg.text = @"あなたの負け";
         
         self.button_scissors.hidden = YES;
@@ -125,19 +123,19 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
-        youscissors = 0;
-        youpaper = 0;
+        aite = 0;
     }
     
-    if (youscissors == 2) {
+    if (aite == 2) {
         self.label_msg.text = @"あいこで・・・";
         
         self.button_rock.hidden = NO;
         self.button_paper.hidden = NO;
+        
+        aite = 0;
     }
     
-    if (youpaper == 3) {
+    if (aite == 3) {
         self.label_msg.text = @"あなたの勝ち";
         
         self.button_scissors.hidden = YES;
@@ -148,9 +146,7 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
-        youscissors = 0;
-        youpaper = 0;
+        aite = 0;
     }
 }
 
@@ -165,7 +161,7 @@
     self.button_rock.hidden = YES;
     self.button_scissors.hidden = YES;
     
-    if (yourock == 1) {
+    if (aite == 1) {
         self.label_msg.text = @"あなたの勝ち";
         
         self.button_paper.hidden = YES;
@@ -176,12 +172,10 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
-        youscissors = 0;
-        youpaper = 0;
+        aite = 0;
     }
     
-    if (youscissors == 2) {
+    if (aite == 2) {
         self.label_msg.text = @"あなたの負け";
         
         self.button_paper.hidden = YES;
@@ -192,25 +186,21 @@
         self.button_scissors.enabled = NO;
         self.button_paper.enabled = NO;
         
-        yourock = 0;
-        youscissors = 0;
-        youpaper = 0;
+        aite = 0;
     }
     
-    if (youpaper == 3) {
+    if (aite == 3) {
         self.label_msg.text = @"あいこで・・・";
         
         self.button_rock.hidden = NO;
         self.button_scissors.hidden = NO;
+        
+        aite = 0;
     }
 }
 
 - (IBAction)again_push:(id)sender {
     self.label_msg.text = @"じゃんけん・・・";
-    
-    yourock = 0;
-    youscissors = 0;
-    youpaper = 0;
     
     // "グー", "チョキ", "パー"ボタンを表示
     self.button_rock.hidden = NO;
@@ -227,6 +217,8 @@
     // ラベルに何も表示しない
     self.label_enemy.text = @"";
     self.label_result.text = @"";
+    
+    aite = 0;
 }
 
 @end

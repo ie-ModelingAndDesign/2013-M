@@ -100,18 +100,18 @@ static NSString * const ServiceType = @"cm-p2ptest";
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([message isEqual:@"rock"]) {
-            VSC.yourock = 1;
-            NSLog(@"%d",VSC.yourock);
+            VSC.aite = 1;
+            NSLog(@"%d",VSC.aite);
         }
         
         if ([message isEqual:@"scissors"]) {
-            VSC.youscissors = 2;
-            NSLog(@"%d",VSC.youscissors);
+            VSC.aite = 2;
+            NSLog(@"%d",VSC.aite);
         }
         
         if ([message isEqual:@"paper"]) {
-            VSC.youpaper = 3;
-            NSLog(@"%d",VSC.youpaper);
+            VSC.aite = 3;
+            NSLog(@"%d",VSC.aite);
         }
         
     });
